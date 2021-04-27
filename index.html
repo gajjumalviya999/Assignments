@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body{
+                margin: 0px;
+            }
+            header, footer{
+                background-color: black;
+                color:rgb(106, 219, 223);
+                position :fixed;
+                height:50px;
+                font-size: 30px;
+                width:100%;
+                line-height: 50px;
+                text-align: center;
+            }
+            .container{
+                background-color: black;
+                border-radius: 10px;
+                position: relative;
+                display:grid;
+                box-shadow:5px 10px 8px 10px #888888;
+                top:50%;
+                left: 50%;
+                height:450px;
+                width: 300px;
+                margin: -225px 0px 0px -150px;
+                justify-content: center;
+                padding: 10px;
+                column-gap: 5px;
+                row-gap: 5px;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-rows: 25% 15% 15% 15% 15% 10% ;
+            }
+            #inp{
+                background-color: rgb(38, 197, 197);
+                color:aliceblue;
+                border-radius: 20px;
+                border:2px solid white;
+                grid-column: 1/5;
+                grid-row: 1/2;
+                text-align: right;
+                font-size: 30px;
+                font-weight: 20;
+            }
+            button{
+                height: 100%;
+                width:100%;
+                text-align: center;
+                border:2px solid white ;
+                background-color: rgb(38, 197, 197);
+                color:aliceblue;
+                border-radius: 10px;
+                font-size: 30px;
+                font-weight: 20;
+            }
+            ::placeholder{
+                color:aliceblue
+            }
+        </style>
+    </head>
+    <body>
+        <header style="top:0;">
+            Calculator
+        </header>
+        <div class="container">
+            <input type="text" id="inp" name="number" placeholder="0"/>
+            <div style=" grid-row:2/3 ; grid-column: 1/2;"> <button>7</button> </div>
+            <div style=" grid-row:2/3 ; grid-column: 2/3;"> <button>8</button> </div>
+            <div style=" grid-row:2/3 ; grid-column: 3/4;"> <button>9</button> </div>
+            <div style=" grid-row:2/3 ; grid-column: 4/5;"> <button>*</button> </div>
+            
+            <div style=" grid-row:3/4 ; grid-column: 1/2;"> <button>4</button> </div>
+            <div style=" grid-row:3/4 ; grid-column: 2/3;"> <button>5</button> </div>
+            <div style=" grid-row:3/4 ; grid-column: 3/4;"> <button>6</button> </div>
+            <div style=" grid-row:3/4 ; grid-column: 4/5;"> <button>-</button> </div>
+            
+            <div style=" grid-row:4/5 ; grid-column: 1/2;"> <button>1</button> </div>
+            <div style=" grid-row:4/5 ; grid-column: 2/3;"> <button>2</button> </div>
+            <div style=" grid-row:4/5 ; grid-column: 3/4;"> <button>3</button> </div>
+            <div style=" grid-row:4/5 ; grid-column: 4/5;"> <button>+</button> </div>
+            
+            <div style=" grid-row:5/6 ; grid-column: 1/2;"> <button>0</button> </div>
+            <div style=" grid-row:5/6 ; grid-column: 2/3;"> <button>.</button> </div>
+            <div style=" grid-row:5/6 ; grid-column: 3/4;"> <button>/</button> </div>
+            <div style=" grid-row:5/6 ; grid-column: 4/5;"> <button>C</button> </div>
+            
+            <div style=" grid-row:6/7 ; grid-column: 1/5;"> <button>=</button> </div>
+
+        </div>
+    </body>
+    <footer style="bottom:0">
+        ThankYou
+    </footer>
+</html>
