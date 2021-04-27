@@ -58,6 +58,14 @@
             ::placeholder{
                 color:aliceblue
             }
+            button:hover{
+                background-color: rgb(8, 75, 75) ;
+            }
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button { 
+                -webkit-appearance: none; 
+                
+            }
         </style>
     </head>
     <body>
@@ -65,7 +73,7 @@
             Calculator
         </header>
         <div class="container">
-            <input type="text" id="inp" name="number" placeholder="0"/>
+            <input type="number" id="inp" name="number" placeholder="0"/>
             <div style=" grid-row:2/3 ; grid-column: 1/2;"> <button>7</button> </div>
             <div style=" grid-row:2/3 ; grid-column: 2/3;"> <button>8</button> </div>
             <div style=" grid-row:2/3 ; grid-column: 3/4;"> <button>9</button> </div>
