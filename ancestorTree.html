@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AncestorTree</title>
     <style>
-        .Body-Class{
+        .great-grand-father{
             width:100%;
             margin-left: 10px;
             margin-top:50px;
             background-color: aqua;
+            border-left: 2px solid black;
         }
         .great-grand-father::before{
             content: "Great-Grand-Father";
@@ -19,10 +20,9 @@
             margin-left: 10px;
             background-color: yellow;
         }
-        .great-grand-father:hover{
-            
-        }
+       
         .grandfather{
+            border-left: 2px solid black;
             height:auto;
             width:80%;
             margin-top: 10px;
@@ -30,6 +30,7 @@
             background-color: rgb(156, 154, 31);
         }
         .father,.aunt ,.uncle{
+            border-left: 2px solid black;
             height:auto;
             width:80%;
             margin-top: 10px;
@@ -37,25 +38,26 @@
             background-color: rgb(100, 99, 7);
         }
         .grandfather::before{
-            content:"Grand Father";
+            content:"--Grand Father";
             margin-top: 10px;
             margin-left: 10px;
             background-color: yellowgreen;
         }
-        .father, .uncle,.aunt {
-           
-           margin-top:10px;
+       
+        .me, .sister,.cousin ,.brother{
+            border-left: 2px solid black;
+            margin-top:10px;    
            margin-left:10px;
-           background-color: green;
+           background-color:red;
         }
         .father::before{
-            content: "father";
+            content: "--father";
         }
         .uncle::before{
-            content: "uncle";
+            content: "--uncle";
         }
         .aunt::before{
-            content: "aunt";
+            content: "--aunt";
         }
         .grandfather,.grandfather div,.grandfather div div{
            visibility: hidden;
