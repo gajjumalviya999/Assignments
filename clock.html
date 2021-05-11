@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap" rel="stylesheet">
+
+    <title>Clock Live</title>
+    <style>
+        *{
+            margin:0;
+            font-family: 'Grenze Gotisch';
+            font-weight: 600;
+        }
+        .clock-container{
+            height:100vh;
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:#005266;
+        }
+        .Date-div, .time-div{
+            color:white;
+            font-size: 150px;
+            width:auto;
+        }
+    </style>
+    <script>
+        function time(){
+            var t=new Date();
+            var date=t.getDate();
+            var month=t.getMonth()+1;
+            var year=t.getFullYear();
+            var hr=t.getHours();
+            var min=t.getMinutes();
+            var sec=t.getSeconds();
+            document.getElementById('ShowDate').innerHTML=" "+date+" - "+ month+ " - "+ year ;
+            document.getElementById('ShowTime').innerHTML =  getTime(hr,min,sec);
+            var aa=setTimeout(time,1000);
+
+        }
+        function getTime(hr, min, sec)
+        {   
+            var res=" ";
+            //hr
+            if(hr==0){
+                res=res+"12 : ";
+            }
+            else if(hr>0 && hr<=12){
+                res=res+hr+" : ";
+            }
+            else 
+               {
+                   var x=hr-12;
+                   res=res+x+" : ";
+               }
+            // min;   
+            if(min<10){
+                res=res+"0"+min+" : ";
+            }   
+            else{
+                res=res+min+" : ";
+            }
+            if(sec<10){
+                res=res+"0"+sec;
+            }
+            else {
+                res=res+sec;
+            }
+
+            if(hr<12)
+            { res = res+ "  AM";
+            }   
+            else
+                res = res+"  PM"  ;  
+            return res;
+        }
+    </script>
+</head>
+<body onload="time()">
+    <div class="clock-container">
+        <div>
+            <p style="color:white; font-size: 40px;">Clock-By Gajju Malviya :):)</p>
+        </div>
+        <div class="Date-div">
+            <p id="ShowDate"></p>
+        </div>
+        <div class="time-div">
+            <p id="ShowTime"></p>
+        </div>
+    </div>
+</body>
+</html>
