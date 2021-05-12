@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random bg</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .container{
+            height:100vh;
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+        .change-bg-button{
+            height:50px;
+            width:200px;
+            background-color: black;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px white;
+            color:white;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function changeColor(){
+            var r=Math.floor(Math.random()*255);
+            var g=Math.floor(Math.random()*255);
+            var b=Math.floor(Math.random()*255);
+            var rgbcolor= "rgb("+r+","+g+","+b+")";
+            document.getElementById('container').style.backgroundColor=rgbcolor;
+        }
+    </script>   
+</head>
+<body>
+    <div class="container" id="container">
+        <button class="change-bg-button" id="change-bg-button" onclick="changeColor();">Change Bg</button>
+    </div>
+    
+</body>
+</html>
