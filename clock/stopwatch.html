@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            background-color: blueviolet;
+            font-family: 'Grenze Gotisch';
+            color:white;
+        }
+        .outer-div{
+            display: flex;
+            flex-direction:column;
+            height:100vh;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .heading-sw{
+            font-size:100px;
+        }
+        #showTime{
+            font-size: 60px;
+        }
+        #buttons button{
+            margin: 20px;
+            height:50px;
+            width:70px;
+            font-weight: 500;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 10px;
+            border: 1px solid white;
+            padding: 2px;
+            background-color: #000066;
+            box-shadow: 1px 2px 30px white;
+        }
+        #buttons button:disabled{
+            background-color:#ddd;
+            color: black;
+            box-shadow: none;
+        }   
+    </style>
+    <script>
+        var secondscount =0;
+        var timer;
+        function showTime(){
+            var hr=Math.floor(secondscount/3600);
+            var min=Math.floor((secondscount%3600)/60);
+            var seconds=Math.floor(secondscount%60);
+            var time="";
+            if(hr<=9){
+                time+="0"+hr+" : ";
+            }
+            else{
+                time+=hr+" : ";
+            }
+            if(min <=9){
+                time+="0"+min+" : ";
+            }
+            else{
+                time+=min +" : ";
+            }
+            if(seconds<=9){
+                time+="0"+seconds;
+            }
+            else {
+                time+=seconds;
+            }
+            var timeelement=document.getElementById("time");
+            timeelement.innerHTML=time;
+            secondscount++;
+        }
+        function startTime(){
+            timer=setInterval(showTime,1000);
+            document.getElementById("startbutton").disabled=true;
+            document.getElementById("stopbutton").disabled=false;
+            document.getElementById("resetbutton").disabled=false;
+            
+        }
+        function stopTime(){
+            clearInterval(timer);
+            document.getElementById("startbutton").disabled=false;
+            document.getElementById("stopbutton").disabled=true;
+            document.getElementById("resetbutton").disabled=false;
+        }
+        function resetTime(){
+            clearInterval(timer);
+            secondscount=0;
+            showTime();
+            document.getElementById("startbutton").disabled=false;
+            document.getElementById("stopbutton").disabled=true;
+            document.getElementById("resetbutton").disabled=true;
+        }
+    </script>
+</head>
+<body onload="showTime()">
+    <div class="outer-div">
+        <div class="heading-sw">
+            <p>StopWatch</p>
+        </div>
+        <div>
+           <p>by Gajju Malviya</p> 
+        </div>
+        <div id="showTime">
+            <p id="time">
+            </p>
+        </div>
+        <div id="buttons">
+            <button onclick="startTime()" id="startbutton">Start</button>
+            <button onclick="stopTime()" id="stopbutton" disabled>Stop</button>
+            <button onclick="resetTime()" id="resetbutton" disabled>Reset</button>
+        </div>
+    </div>
+</body>
+</html>

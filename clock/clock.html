@@ -31,6 +31,7 @@
         }
     </style>
     <script>
+        setInterval(time,1000);
         function time(){
             var t=new Date();
             var date=t.getDate();
@@ -41,8 +42,6 @@
             var sec=t.getSeconds();
             document.getElementById('ShowDate').innerHTML=" "+date+" - "+ month+ " - "+ year ;
             document.getElementById('ShowTime').innerHTML =  getTime(hr,min,sec);
-            var aa=setTimeout(time,1000);
-
         }
         function getTime(hr, min, sec)
         {   
