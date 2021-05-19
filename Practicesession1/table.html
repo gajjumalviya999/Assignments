@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            background-color: gray;
+        }
+        .menu{
+            height:50px;
+            width:100%;
+            background-color: turquoise;
+            padding-left: 20px;
+        }
+        .menu ul{
+            font-size: 20px;
+            list-style-type:none;
+            background-color: transparent;
+        }
+        .lidiv{
+            background-color: transparent;
+            display: inline-block;
+            padding-left:20px;
+            line-height: 50px;
+        }
+        .menu a{
+            background-color: transparent;
+            color:white;
+            text-decoration: none;
+        }
+       
+        .tableclass{
+            width:700px;
+            text-align: center;
+            margin: auto;
+            margin-top:100px;
+            border-collapse: collapse;
+            border-radius: 10px;
+        }
+        .tableclass thead {
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .tableclass thead th {
+            background-color: aqua;
+            padding: 15px 20px;
+        }
+
+        .tableclass tbody td{
+            padding: 15px 20px;
+            color: black
+        }
+
+        .tableclass tbody tr {
+            border-right: 1px solid #eee;
+            border-left: 1px solid #eee;
+        }
+
+
+        .tableclass tbody tr:last-child {
+            border-bottom: 1px solid #eee;
+            border-radius: 10px;
+        }
+ 
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <ul class="uldiv">
+                <li class="lidiv"><a href="#">Home</a></li>
+                <li class="lidiv"><a href="#">About</a></li>
+                <li class="lidiv"><a href="#">Contact</a></li>
+                <li class="lidiv"><a href="#">Help</a></li>
+            </ul>
+        </div>
+    </header>
+    <table class="tableclass">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th> Last Name</th>
+                <th>Age </th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Gajendra</td>
+                <td>Malviya</td>
+                <td>21</td>
+                <td>Indore</td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Gajendra</td>
+                <td>Malviya</td>
+                <td>21</td>
+                <td>Indore</td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Gajendra</td>
+                <td>Malviya</td>
+                <td>21</td>
+                <td>Indore</td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Gajendra</td>
+                <td>Malviya</td>
+                <td>21</td>
+                <td>Indore</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
