@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Table</title>
+    <style>
+        *{
+            margin:0px;
+            background-color:grey;
+        }
+        .container{
+            height:100vh;
+            width:100%;
+        }
+        .tablecontainer{
+            margin: auto;
+            height:500px;
+            width:600px;
+            text-align: center;
+        }
+        table{
+            margin-top: 40px;
+            width:100%;
+        }
+       tr{
+          width:100%;
+          height:40px;
+          border: 1px solid black;
+       }
+       th{
+           background-color: aqua;
+           border-radius: 10px;
+       }
+       td{ 
+         border-radius: 10px;
+       }
+       tbody tr:nth-child(n) td{
+            background-color: violet;
+       }
+       a{  color:white;
+           background-color: transparent;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tablecontainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th >Serial No</th>
+                        <th>Class Title</th>
+                        <th >Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td >1</td>
+                        <td >Portfolio</td>
+                        <td ><a href="https://gajjumalviya999.github.io">Portfolio</a></td>
+                    </tr>
+                    <tr>
+                        <td >2</td>
+                        <td >Assignment Table</td>
+                        <td ><a href="https://gajjumalviya999.github.io/Assignments/class3/assignmentTable.html">Assignment Table</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>registration form</td>
+                        <td><a href="https://gajjumalviya999.github.io/Assignments/class2/task1/registration.html">Registration Table</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
